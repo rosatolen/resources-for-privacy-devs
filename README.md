@@ -37,7 +37,7 @@
 ### DES
 * [On the Security of Multiple Encryption](http://cs.jhu.edu/~sdoshi/crypto/papers/p465-merkle.pdf) by Ralph C. Merkle and Martin E. Hellman.
 
-## Key Exchange 
+## Key Exchange
 
 ### Cramer-Shoup
 * [Cramer Shoup Cryto-System Java implementation](https://github.com/omoeller/cramshou) by omoeller (not audited). 
@@ -97,7 +97,7 @@
 ### The Random Oracle Model
 * [The random oracle model: a twenty-year retrospective](https://eprint.iacr.org/2015/140.pdf) by Neal Koblitz and Alfred J. Menezes. 
 
-## Protocol
+## Protocols
 
 ### Sociallist Millionaire Protocol (SMP)
 * [Socialist Millionaire Protocol Passphrase Generator](https://github.com/dillbyrne/smpp-generator) by dillbyrne. 
@@ -128,7 +128,6 @@
 ### Nik Unger otr implementation
 * [Off-the-Record Messaging](https://crysp.uwaterloo.ca/software/) by Ian Goldberg. 
 
-
 ## PostQuantum Crypto
 * [PQCHacks: A gentle introduction to post-quantum cryptography](https://media.ccc.de/v/32c3-7210-pqchacks#video&t=908) by djb and Tanja Lange in 32c3.
 * [Towards quantum-resistance cryptosystems from supersingular elliptic curve isogenies](http://eprint.iacr.org/2011/506.pdf) by Luca de Feo, David Jao and Jerome Plut. 
@@ -142,7 +141,7 @@
 * [Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)
 
 ----------------------------------------------------------------------------
-# Programming
+# Programming Languages
 
 ## Golang
 
@@ -161,6 +160,7 @@
 
 ### ForLoop
 * [Control structures - Go for loop, break, continue, range](http://golangtutorials.blogspot.com/2011/06/control-structures-go-for-loop-break.html)----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 # Code for Tor Browser High Security Mode
 In high security mode, Tor only allows PNG images to be available.
 
