@@ -1,4 +1,10 @@
-# Useful Crypto-related Resources
+# Table of Contents
+
+1. [Crypto-related Resources]
+2. [Programming Languages]
+3. [Code for Tor Browser High Security Mode]
+
+# Crypto-related Resources
 
 ## OTR
 
