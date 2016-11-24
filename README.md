@@ -7,12 +7,10 @@
 ----------------------------------------------------------------------------
 # Crypto-related Resources
 
-###OTRv2
-
+##OTRv2
 * [Finite-State Security Analysis of OTR Version 2](http://www.jbonneau.com/doc/BM06-OTR_v2_analysis.pdf) by Joseph Bonneau and Andrew Morrison. 
 * [Protocol](https://otr.cypherpunks.ca/Protocol-2.0.2.txt) by Nikita Borisov and Ian Goldberg.
 * [Secure Off-the-Record Messaging](https://www.dmi.unict.it/diraimondo/web/wp-content/uploads/papers/otr.pdf) by Mario Di Raimondo, Rosario Gennaro and Hugo Krawczyk 
-
 
 ## Zero Knowledge Proof
 * [Multiple Non-Interactive Zero Knowledge Proofs Based on a Single Random String](https://www.computer.org/csdl/proceedings/focs/1990/2082/00/089549.pdf) by Uriel Feige, Dror Lapidot and Adi Shamir. 
@@ -24,13 +22,14 @@
 
 ### Stream cipher
 
-#### Salsa 20
-* [Salsa20 security](https://cr.yp.to/snuffle/security.pdf) by Daniel J. Bernstein. 
-* [Notes on the Salsa20 key size](https://cr.yp.to/snuffle/keysizes.pdf) by Daniel J. Bernstein. 
+#### Salsa20
+* [Snuffle spec](https://cr.yp.to/snuffle.html#specification)
+* [Salsa20 security](https://cr.yp.to/snuffle/security.pdf) by Daniel J. Bernstein.
+* [Notes on the Salsa20 key size](https://cr.yp.to/snuffle/keysizes.pdf) by Daniel J. Bernstein.
 
 #### XSalsa20
-* [Extending the Salsa20 nonce](http://cr.yp.to/snuffle/xsalsa-20081128.pdf) by Daniel J. Bernstein. 
-* [Notes on the Salsa20 key size](https://cr.yp.to/snuffle/keysizes.pdf) by Daniel J. Bernstein. 
+* [Extending the Salsa20 nonce](http://cr.yp.to/snuffle/xsalsa-20081128.pdf) by Daniel J. Bernstein.
+* [Notes on the Salsa20 key size](https://cr.yp.to/snuffle/keysizes.pdf) by Daniel J. Bernstein.
 
 ### Blockcipher
 
@@ -49,6 +48,9 @@
 * [Cramer Shoup Cryto-System Python implementation](https://github.com/benkreuter/cca2python) by benkreuter. 	
 
 ### Elliptic Curve
+* [Basics from Modern Cyrpto Mailing List](https://moderncrypto.org/mail-archive/curves/2016/000812.html)
+* [Base point values from Safe Curves](https://safecurves.cr.yp.to/base.html)
+* [Designing Elliptic Curve Signature Systems](https://blog.cr.yp.to/20140323-ecdsa.html)
 * [Elliptic Curves for Security draft-irtf-cfrg-curves-02](https://tools.ietf.org/html/draft-irtf-cfrg-curves-02#section-6.2): an algorithm for deterministically generating parameters for elliptic curves over prime fields by A. Langley.
 * [A brief discussion on selecting new elliptic curves](http://csrc.nist.gov/groups/ST/ecc-workshop-2015/papers/session4-costello-craig.pdf) by Craig Costello, Patrick Longa, and Michael Naehrig 
 
@@ -69,12 +71,15 @@
 
 #### ed448
 
-* [Ed448-Goldilocks](http://ed448goldilocks.sourceforge.net/) by sourceforge. 
-* [Mike Hamburg Implementation](https://sourceforge.net/p/ed448goldilocks/code/ci/decaf/tree/).
-* [STRIKE implementation](https://github.com/twstrike/ed448).  
-* [Ed448-Goldilocks, a new elliptic curve](https://eprint.iacr.org/2015/625.pdf) by Mike Hamburg. 
+* [Ed448-Goldilocks, a new elliptic curve](https://eprint.iacr.org/2015/625.pdf) by Mike Hamburg
+* [Ed448-Goldilocks code](http://ed448goldilocks.sourceforge.net/)
+* [Decaf Publication in Modern Crypto](https://moderncrypto.org/mail-archive/curves/2015/000407.html)
+* [Decaf Paper](https://mikehamburg.com/papers/decaf/decaf.pdf)
+* [Decaf Implementation](https://sourceforge.net/p/ed448goldilocks/code/ci/decaf/tree/)
+* [STRIKE implementation](https://github.com/twstrike/ed448)
 
 #### ed225519
+* [Spec](https://ed25519.cr.yp.to/)
 * [Implementation](https://ed25519.cr.yp.to/python/ed25519.py) by Daniel J. Bernstein. 
 
 ## Message Authentification Code (MAC)
@@ -91,12 +96,20 @@
 * [Proving tight security for Rabin–Williams signatures](https://cr.yp.to/sigs/rwtight-20080201.pdf) by Daniel J. Bernstein.
 * [Short signatures from the Weil pairing](https://www.iacr.org/archive/asiacrypt2001/22480516.pdf) by Dan Boneh, Ben Lynn, and Hovav Shacham.
 * [A Provably Secure Nyberg-Rueppel Signature Variant with Applications](https://eprint.iacr.org/2004/093.pdf) by Giuseppe Ateniese and Breno de Medeiros. 
+* [Deterministic usage of DSA and ECDSA RFC](https://tools.ietf.org/html/rfc6979)
+* [SPHINCS Stateless hash-based signatures](https://sphincs.cr.yp.to/software.html)
 
 ### XEdDSA
 * [The XEdDSA and VXEdDSA Signature Schemes](https://whispersystems.org/docs/specifications/xeddsa/#curve448) by Trevor Perrin. 
 
 ### The Random Oracle Model
 * [The random oracle model: a twenty-year retrospective](https://eprint.iacr.org/2015/140.pdf) by Neal Koblitz and Alfred J. Menezes. 
+
+## Cryptocurrency
+* [Zcash](https://github.com/zcash/zcash)
+
+### Proof of Work
+* [Equihash](https://www.internetsociety.org/sites/default/files/blogs-media/equihash-asymmetric-proof-of-work-based-generalized-birthday-problem.pdf)
 
 ----------------------------------------------------------------------------
 ## Designing and Using Protocols
@@ -109,6 +122,7 @@
   * Are you concerned about the attacker finding the hash input given your hash output? (Pre-image attack)
   * Are you worried about an attacker finding another input that would produce the same value as yours? (Collision attack)
 * Using a hash function with a lower security than the seed input WILL result in an output of lower security
+* [Quick Hash Comparisons](https://emn178.github.io/online-tools/sha3_224.html)
 
 ### Sociallist Millionaire Protocol (SMP)
 * [Socialist Millionaire Protocol Passphrase Generator](https://github.com/dillbyrne/smpp-generator) by dillbyrne. 
@@ -131,14 +145,13 @@
 * [Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography](http://csrc.nist.gov/groups/ST/toolkit/documents/SP800-56Arev1_3-8-07.pdf) by Elaine Barker, Don Johnson, and Miles Smid in NIST. 
 
 ## Library
-
-### Pairing-based cryptography
-* [The PBC (Pairing-Based Cryptography) library](https://crypto.stanford.edu/pbc/) by Ben Lynn.
-
-### Nik Unger otr implementation
-* [Off-the-Record Messaging](https://crysp.uwaterloo.ca/software/) by Ian Goldberg. 
+* [NaCl](https://nacl.cr.yp.to/index.html)
+* [Off-the-Record Messaging Implementation by Nik Unger](https://crysp.uwaterloo.ca/software/)
+* [The PBC (Pairing-Based Cryptography) library](https://crypto.stanford.edu/pbc/) by Ben Lynn
 
 ## PostQuantum Crypto
+* [PQCrypto 2016](https://pqcrypto2016.jp)
+* [PQCrypto 2016 Videos](https://www.youtube.com/playlist?list=PLCAbx7kHwCGLPpgETzBqQg11comaFCF_H)
 * [PQCHacks: A gentle introduction to post-quantum cryptography](https://media.ccc.de/v/32c3-7210-pqchacks#video&t=908) by djb and Tanja Lange in 32c3.
 * [Towards quantum-resistance cryptosystems from supersingular elliptic curve isogenies](http://eprint.iacr.org/2011/506.pdf) by Luca de Feo, David Jao and Jerome Plut. 
 
