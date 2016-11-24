@@ -99,7 +99,16 @@
 * [The random oracle model: a twenty-year retrospective](https://eprint.iacr.org/2015/140.pdf) by Neal Koblitz and Alfred J. Menezes. 
 
 ----------------------------------------------------------------------------
-## Protocols
+## Designing and Using Protocols
+* Determining the Security Level. In the cycle of creating cryptography, a cryptographer will publish a new algorithm for encryption or
+  digital signatures, and subsequently, further research will be done to determine its security level. Search for this research to understand
+  the security parts of your protocol.
+* Hashes have two levels of security one based on collision attacks and the other based on and pre-image attack resistance. When deciding
+  on which hash to use, it is important to keep in mind whether collision or pre-image attacks are a problem in the context of how the hash
+  is used.
+  * Are you concerned about the attacker finding the hash input given your hash output? (Pre-image attack)
+  * Are you worried about an attacker finding another input that would produce the same value as yours? (Collision attack)
+* Using a hash function with a lower security than the seed input WILL result in an output of lower security
 
 ### Sociallist Millionaire Protocol (SMP)
 * [Socialist Millionaire Protocol Passphrase Generator](https://github.com/dillbyrne/smpp-generator) by dillbyrne. 
